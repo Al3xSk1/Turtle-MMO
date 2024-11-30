@@ -32,6 +32,7 @@ def process_commands():
     while not command_queue.empty():
         idnum, command = command_queue.get()
         if command == "forward":
+            turtlearr[idnum - 1].dot()
             dis = random.randint(10, 50)
             turtlearr[idnum - 1].forward(dis)
             if dis > 25 and random.randint(0, 10) > 9:
@@ -42,6 +43,7 @@ def process_commands():
             if turtlearr[idnum - 1].xcor() > 800:
                 turtlearr[idnum - 1].goto(0, turtlearr[idnum - 1].ycor())
                 turtlearr[idnum - 1].write(f"Turtle from PC {idnum} got place {place}", font=("Arial", 24, "normal"))
+                turtlearr[idnum - 1].turtlesize(10)
                 place += 1
     turtle.ontimer(process_commands, 100)  # Schedule the next check
 
