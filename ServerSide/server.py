@@ -1,3 +1,7 @@
+# Programmer: Alex
+# Purpose: Server side code for the Turtle Race MMO
+# Function: Using Socket to decode commands, using random to add an element of chance, and threading to optimize
+
 import tkinter as TK
 import socket
 import threading

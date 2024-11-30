@@ -1,4 +1,7 @@
-import time
+# Programmer: Alex
+# Purpose: Client side code for the Turtle Race MMO
+# Function: Using Socket to encode commands 
+
 import socket
 
 def send_command(idnum, command):
