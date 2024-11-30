@@ -14,6 +14,9 @@ command_queue = Queue()
 
 for pc in range(26):
     t = turtle.Turtle(shape="turtle")
+    color = "#{:06x}".format(random.randint(0, 0xFFFFFF))
+    t.fillcolor(color)
+    t.pencolor(color)
     t.speed(0)
     t.goto(startX, startY)
     turtlearr.append(t)
