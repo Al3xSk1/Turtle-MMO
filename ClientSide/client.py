@@ -1,4 +1,6 @@
+import time
 import socket
+
 def send_command(idnum, command):
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(('localhost', 5000))
@@ -7,6 +9,11 @@ def send_command(idnum, command):
 
 if __name__ == '__main__':
     client_id = "01"
+    command = "forward"
+    index = 0
     while True:
-        command = input('Enter command: ')
-        send_command(client_id, command)
+        some = input("click enter for movement: ")
+        if (some == some):
+            send_command(client_id, command)
+            print(index)
+            index = index + 1
