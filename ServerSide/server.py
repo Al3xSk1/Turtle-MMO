@@ -46,6 +46,8 @@ def process_commands():
                 turtlearr[idnum - 1].write(f"Turtle from PC {idnum} got place {place}", font=("Arial", 24, "normal"))
                 turtlearr[idnum - 1].turtlesize(10)
                 place += 1
+                for step in range(5*360):
+                    turtlearr[idnum - 1].right(1)
     turtle.ontimer(process_commands, 100)  # Schedule the next check
 
 # Handle client commands
