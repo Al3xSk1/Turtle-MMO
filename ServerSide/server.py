@@ -23,6 +23,7 @@ for pc in range(26):
     t.pencolor(color)
     t.speed(0)
     t.goto(startX, startY)
+    t.speed(random.randint(1, 5))
     turtlearr.append(t)
     startY -= 25
 
